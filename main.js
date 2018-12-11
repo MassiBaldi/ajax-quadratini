@@ -15,7 +15,7 @@ $(document).ready(function(){
     $('.griglia').append(quadratiTemplate);
   }
 
-  $(document).on('click', '.square', function(){
+  $('.square').click(function(){
     // alert('ciao');
     var thisSquare = $(this);
     var numeroAjax = 0
