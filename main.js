@@ -14,8 +14,8 @@ $(document).ready(function(){
 
     $('.griglia').append(quadratiTemplate);
   }
-  var thisSquare = $(this).suare;
-  $(document).on('click', 'thisSquare', function(){
+
+  $(document).on('click', '.square', function(){
     // alert('ciao');
     var thisSquare = $(this);
 
@@ -32,6 +32,7 @@ $(document).ready(function(){
         }
         else {
           $('.square').addClass('activeGreen')
+          $('.square').append(numeroAjax)
         }
       },
       error: function(){
