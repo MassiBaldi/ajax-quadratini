@@ -18,8 +18,6 @@ $(document).ready(function(){
   $(document).on('click', '.square', function(){
     // alert('ciao');
     var thisSquare = $(this);
-
-    console.log(thisSquare);
     var numeroAjax = 0
     $.ajax({
       url:'https://www.boolean.careers/api/random/int',
@@ -27,12 +25,13 @@ $(document).ready(function(){
       success: function(data){
         numeroAjax = data.response;
         console.log(data);
+
         if (numeroAjax <= 5) {
-          $('.square').addClass('activeYellow')
+          thisSquare.addClass('activeYellow')
         }
         else {
-          $('.square').addClass('activeGreen')
-          $('.square').append(numeroAjax)
+          thisSquare.addClass('activeGreen')
+          thisSquare.append(numeroAjax)
         }
       },
       error: function(){
